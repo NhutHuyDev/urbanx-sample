@@ -72,7 +72,7 @@ var gateway = builder.AddProject<Projects.UrbanX_Gateway>("gateway")
     .WaitFor(inventoryService)
     .WaitFor(identityService);
 
-var frontend = builder.AddViteApp("frontend", "../../frontend/urbanx-react")
+var frontend = builder.AddViteApp("frontend", "../../Frontend/urbanx-react")
     .WithReference(gateway)
     .WaitFor(gateway)
     .WithExternalHttpEndpoints();
